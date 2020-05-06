@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+"-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="image">
+	<select id="image.selectPageList"
+		parameterType="com.enterprise.entity.Image"
+		resultType="com.enterprise.entity.Image">
+		select * from t_image  where 1=1
+		order by id desc
+		limit #{offset},#{pageSize}
+	</select>
+	<select id="image.selectPageCount"
+		parameterType="com.enterprise.entity.Image"
+		resultType="java.lang.Integer">
+		select count(*) from  t_image t where 1=1
+		
+	</select>
+	<insert id="image.insert"
+		parameterType="com.enterprise.entity.Image"
+		useGeneratedKeys="true" keyProperty="id">
+		insert into t_image(
+			id
+		<if test="image!=null and image!=''">
+			,image
+		</if>
+		<if test="title!=null and title!=''">
+			,title
+		</if>
+
+		) values (
+		#{id}
+		<if test="image!=null and image!=''">
+			,#{image}
+		</if>
+		<if test="title!=null and title!=''">
+			,#{title}
+		</if>
+		)
+	</insert>
+	<update id="image.update"
+		parameterType="com.enterprise.entity.Image">
+		update t_image
+		set id=#{id}
+		<if test="image!=null and image!=''">
+			,image=#{image}
+		</if>
+		<if test="title!=null and title!=''">
+			,title=#{title}
+		</if>
+			where 1=1 and id=#{id}
+	</update>
+	<select id="image.selectOne"
+		parameterType="com.enterprise.entity.Image"
+		resultType="com.enterprise.entity.Image">
+		select * from t_image where 1=1 limit 0,1
+	</select>
+	<select id="image.selectList" parameterType="com.enterprise.entity.Image" resultType="com.enterprise.entity.Image">
+		select * from t_image where 1=1
+		<if test="title!=null and title!=''">
+			and title like '%${title}%'
+		</if>
+	</select>
+	<select id="image.selectById" parameterType="int" resultType="com.enterprise.entity.Image">
+	 select * from t_image  where 1=1 and id=#{id}
+	</select>
+	<delete id="image.delete" parameterType="com.enterprise.entity.Image">
+		delete from t_image where id = #{id}
+	</delete>
+</mapper>

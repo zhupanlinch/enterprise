@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+"-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="serviceCard">
+	<select id="serviceCard.selectPageList"
+		parameterType="com.enterprise.entity.ServiceCard"
+		resultType="com.enterprise.entity.ServiceCard">
+		select * from t_servicecard  where 1=1
+		order by id desc
+		limit #{offset},#{pageSize}
+	</select>
+	<select id="serviceCard.selectPageCount"
+		parameterType="com.enterprise.entity.ServiceCard"
+		resultType="java.lang.Integer">
+		select count(*) from  t_servicecard t where 1=1
+		
+	</select>
+	<insert id="serviceCard.insert"
+		parameterType="com.enterprise.entity.ServiceCard"
+		useGeneratedKeys="true" keyProperty="id">
+		insert into t_servicecard(
+			id
+		<if test="content!=null and content!=''">
+			,content
+		</if>
+		<if test="title!=null and title!=''">
+			,title
+		</if>
+
+		) values (
+		#{id}
+		<if test="content!=null and content!=''">
+			,#{content}
+		</if>
+		<if test="title!=null and title!=''">
+			,#{title}
+		</if>
+		)
+	</insert>
+	<update id="serviceCard.update"
+		parameterType="com.enterprise.entity.ServiceCard">
+		update t_servicecard
+		set id=#{id}
+		<if test="content!=null and content!=''">
+			,content=#{content}
+		</if>
+		<if test="title!=null and title!=''">
+			,title=#{title}
+		</if>
+			where 1=1 and id=#{id}
+	</update>
+	<select id="serviceCard.selectOne"
+		parameterType="com.enterprise.entity.ServiceCard"
+		resultType="com.enterprise.entity.ServiceCard">
+		select * from t_servicecard where 1=1 limit 0,1
+	</select>
+	<select id="serviceCard.selectList" parameterType="com.enterprise.entity.ServiceCard" resultType="com.enterprise.entity.ServiceCard">
+		select * from t_servicecard where 1=1
+		<if test="title!=null and title!=''">
+			and title like '%${title}%'
+		</if>
+	</select>
+	<select id="serviceCard.selectById" parameterType="int" resultType="com.enterprise.entity.ServiceCard">
+	 select * from t_servicecard  where 1=1 and id=#{id}
+	</select>
+	<delete id="serviceCard.delete" parameterType="com.enterprise.entity.ServiceCard">
+		delete from t_servicecard where id = #{id}
+	</delete>
+</mapper>
