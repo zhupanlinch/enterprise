@@ -38,14 +38,14 @@
 
 ## 系统预览
 
-![首页](https://github.com/zhupanlinch/enterprise/blob/master/src/main/webapp/attached/image/home.png)
-![服务](https://github.com/zhupanlinch/enterprise/blob/master/src/main/webapp/attached/image/service.png)
-![新闻](https://github.com/zhupanlinch/enterprise/blob/master/src/main/webapp/attached/image/article.png)
-![团队](https://github.com/zhupanlinch/enterprise/blob/master/src/main/webapp/attached/image/team.png)
-![招聘](https://github.com/zhupanlinch/enterprise/blob/master/src/main/webapp/attached/image/job.png)
-![联系](https://github.com/zhupanlinch/enterprise/blob/master/src/main/webapp/attached/image/contact.png)
+![首页](https://github.com/zhupanlinch/enterprise/raw/master/src/main/webapp/attached/image/home.png)
+![服务](https://github.com/zhupanlinch/enterprise/raw/master/src/main/webapp/attached/image/service.png)
+![新闻](https://github.com/zhupanlinch/enterprise/raw/master/src/main/webapp/attached/image/article.png)
+![团队](https://github.com/zhupanlinch/enterprise/raw/master/src/main/webapp/attached/image/team.png)
+![招聘](https://github.com/zhupanlinch/enterprise/raw/master/src/main/webapp/attached/image/job.png)
+![联系](https://github.com/zhupanlinch/enterprise/raw/master/src/main/webapp/attached/image/contact.png)
 
-![后端首页](https://github.com/zhupanlinch/enterprise/blob/master/src/main/webapp/attached/image/back.png)
+![后端首页](https://github.com/zhupanlinch/enterprise/raw/master/src/main/webapp/attached/image/back.png)
 
 
 
