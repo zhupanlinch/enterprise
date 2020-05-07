@@ -4,7 +4,7 @@
 
 通用企业门户网站，门户所有内容均可在后台配置，支持多皮肤，以及自定义皮肤开发，皮肤可在后台配置。
 
-## 特性：
+## 配料表：
 
 * 开发语言：Java
 
@@ -12,7 +12,7 @@
 
 * 数 据 库：MySQL
 
-* 核心框架：Spring、SpringMVC、mybatis
+* 核心框架：Spring、SpringMVC、mybatis、ehcache
 
 * 皮肤开发：在webapp下创建文件夹，在webapp\manage\systemsetting\systemSettingEdit.jsp中加上皮肤配置项，进行模板开发，修改配置即可生效。目前已有2套皮肤，可以切换查看。
 
