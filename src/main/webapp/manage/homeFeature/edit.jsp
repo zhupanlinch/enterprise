@@ -31,7 +31,7 @@
             <tr>
                 <th style="text-align: right;" width="200">内容</th>
                 <td style="text-align: left;"><textarea name="content" id="content" data-rule="内容:required;"
-                                                             style="width:850px;height:150px;">${e.content}</textarea></td>
+                                                                            style="width:850px;height:400px;visibility:hidden;">${e.content}</textarea></td>
             </tr>
 
             <tr>
@@ -57,27 +57,63 @@
 </form>
 
 <script type="text/javascript">
-    KindEditor.ready(function (K) {
-        var editor = K.editor({
-            allowFileManager : true,
-            uploadJson: '<%=path%>/resource/kindeditor/jsp/upload_json.jsp',
-            fileManagerJson : '<%=path%>/resource/kindeditor/jsp/file_manager_json.jsp'
-        });
-        K('input[name=imageFile]').click(function() {
-            editor.loadPlugin('image', function() {
-                editor.plugin.imageDialog({
-                    imageUrl : K('#image').val(),
-                    clickFn : function(url) {
-                        K('#image').val(url);
-                        editor.hideDialog();
-                    }
+    var content;
+        KindEditor.ready(function (K) {
+            content = K.create('textarea[name="content"]', {
+                filterMode: false,
+                allowFileManager: true,
+                uploadJson: '<%=path%>/resource/kindeditor/jsp/upload_json.jsp',
+                fileManagerJson: '<%=path%>/resource/kindeditor/jsp/file_manager_json.jsp'
+
+            });
+            var editor = K.editor({
+                allowFileManager : true,
+                uploadJson: '<%=path%>/resource/kindeditor/jsp/upload_json.jsp',
+                fileManagerJson : '<%=path%>/resource/kindeditor/jsp/file_manager_json.jsp'
+            });
+
+            K('input[name=getHtml]').click(function (e) {
+                alert(editor.html());
+            });
+            K('input[name=isEmpty]').click(function (e) {
+                alert(editor.isEmpty());
+            });
+            K('input[name=getText]').click(function (e) {
+                alert(editor.text());
+            });
+            K('input[name=selectedHtml]').click(function (e) {
+                alert(editor.selectedHtml());
+            });
+            K('input[name=setHtml]').click(function (e) {
+                editor.html('<h3>Hello KindEditor</h3>');
+            });
+            K('input[name=setText]').click(function (e) {
+                editor.text('<h3>Hello KindEditor</h3>');
+            });
+            K('input[name=insertHtml]').click(function (e) {
+                editor.insertHtml('<strong>插入HTML</strong>');
+            });
+            K('input[name=appendHtml]').click(function (e) {
+                editor.appendHtml('<strong>添加HTML</strong>');
+            });
+            K('input[name=imageFile]').click(function() {
+                editor.loadPlugin('image', function() {
+                    editor.plugin.imageDialog({
+                        imageUrl : K('#image').val(),
+                        clickFn : function(url) {
+                            K('#image').val(url);
+                            editor.hideDialog();
+                        }
+                    });
                 });
             });
+            K('input[name=clear]').click(function (e) {
+                editor.html('');
+            });
+
         });
-
-    });
     function commit(obj) {
-
+        content.sync();
         var _form = $("form");
         _form.attr("action", $(obj).attr("method"));
         _form.submit();
