@@ -1,11 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Cesiumai
-  Date: 2016/7/8
-  Time: 15:35
-  To change this template use File | Settings | File Templates.
---%>
-
 <%@ page language="java" contentType="text/html; UTF-8"
          pageEncoding="UTF-8"%>
 
@@ -29,9 +21,7 @@
         <div style="overflow: hidden;">
             <div class="article_content">
 
-                    <c:forEach var="item" items="<%=SystemManage.getInstance().getAbout()%>">
-                        ${item.contentHtml}
-                    </c:forEach>
+                    <%=SystemManage.getInstance().getAbout().getContentHtml()%>
             </div>
         </div>
     </div>

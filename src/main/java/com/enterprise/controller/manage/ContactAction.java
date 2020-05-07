@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * 联系我们 管理
- * Created by Cesiumai on 2016/7/8.
  */
 @Controller
 @RequestMapping("/manage/contact")

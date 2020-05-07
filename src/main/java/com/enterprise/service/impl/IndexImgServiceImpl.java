@@ -8,9 +8,6 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
-/**
- * Created by Cesiumai on 2016/5/27.
- */
 @Service("indexImgService")
 public class IndexImgServiceImpl extends ServersManage<IndexImg,IndexImgDao> implements IndexImgService {
     @Override

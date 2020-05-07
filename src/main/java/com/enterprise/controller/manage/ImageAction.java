@@ -41,7 +41,6 @@ public class ImageAction extends BaseController<Image>{
         imageService.insert(image);
         insertAfter(image);
         addMessage(flushAttrs,"操作成功！");
-        frontCache.loadArticleCategroy();//加载缓存
         return "redirect:selectList";
     }
 
@@ -50,7 +49,6 @@ public class ImageAction extends BaseController<Image>{
         imageService.update(image);
         insertAfter(image);
         addMessage(flushAttrs, "操作成功！");
-        frontCache.loadArticleCategroy();//加载缓存
         return "redirect:selectList";
     }
     @RequestMapping("delete")
@@ -58,7 +56,6 @@ public class ImageAction extends BaseController<Image>{
         imageService.delete(image);
         insertAfter(image);
         addMessage(flushAttrs, "操作成功！");
-        frontCache.loadArticleCategroy();//加载缓存
         return "redirect:selectList";
     }
 

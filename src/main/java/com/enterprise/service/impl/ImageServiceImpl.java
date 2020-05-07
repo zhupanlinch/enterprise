@@ -8,9 +8,6 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
-/**
- * Created by Cesiumai on 2016/7/8.
- */
 @Service("imageService")
 public class ImageServiceImpl extends ServersManage<Image,ImageDao> implements ImageService{
     @Override

@@ -5,7 +5,6 @@ import java.io.Serializable;
 import com.enterprise.entity.page.PageModel;
 /**
  * 招聘实体类
- * @author Cesiumai
  *
  */
 public class Recruitment extends PageModel implements Serializable{

@@ -18,7 +18,6 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 
 /**门户滚动图片Action
- * Created by Cesiumai on 2016/5/27.
  */
 @Controller
 @RequestMapping("/manage/indexImg/")

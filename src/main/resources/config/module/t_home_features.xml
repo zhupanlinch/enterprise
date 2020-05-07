@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+"-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="homeFeatures">
+	<select id="homeFeatures.selectPageList"
+		parameterType="com.enterprise.entity.HomeFeature"
+		resultType="com.enterprise.entity.HomeFeature">
+		select * from t_home_features  where 1=1
+		order by id desc
+		limit #{offset},#{pageSize}
+	</select>
+	<select id="homeFeatures.selectPageCount"
+		parameterType="com.enterprise.entity.HomeFeature"
+		resultType="java.lang.Integer">
+		select count(*) from  t_home_features t where 1=1
+		
+	</select>
+	<insert id="homeFeatures.insert"
+		parameterType="com.enterprise.entity.HomeFeature"
+		useGeneratedKeys="true" keyProperty="id">
+		insert into t_home_features(
+			id
+		<if test="image!=null and image!=''">
+			,image
+		</if>
+		<if test="title!=null and title!=''">
+			,title
+		</if>
+		<if test="content!=null and content!=''">
+			,content
+		</if>
+		) values (
+		#{id}
+		<if test="image!=null and image!=''">
+			,#{image}
+		</if>
+		<if test="title!=null and title!=''">
+			,#{title}
+		</if>
+		<if test="content!=null and content!=''">
+			,#{content}
+		</if>
+		)
+	</insert>
+	<update id="homeFeatures.update"
+		parameterType="com.enterprise.entity.HomeFeature">
+		update t_home_features
+		set id=#{id}
+		<if test="image!=null and image!=''">
+			,image=#{image}
+		</if>
+		<if test="title!=null and title!=''">
+			,title=#{title}
+		</if>
+		<if test="content!=null and content!=''">
+			,content=#{content}
+		</if>
+			where 1=1 and id=#{id}
+	</update>
+	<select id="homeFeatures.selectOne"
+		parameterType="com.enterprise.entity.HomeFeature"
+		resultType="com.enterprise.entity.HomeFeature">
+		select * from t_home_features where 1=1 limit 0,1
+	</select>
+	<select id="homeFeatures.selectList" parameterType="com.enterprise.entity.HomeFeature" resultType="com.enterprise.entity.HomeFeature">
+		select * from t_home_features where 1=1
+		<if test="title!=null and title!=''">
+			and title like '%${title}%'
+		</if>
+	</select>
+	<select id="homeFeatures.selectById" parameterType="int" resultType="com.enterprise.entity.HomeFeature">
+	 select * from t_home_features  where 1=1 and id=#{id}
+	</select>
+	<delete id="homeFeatures.delete" parameterType="com.enterprise.entity.HomeFeature">
+		delete from t_home_features where id = #{id}
+	</delete>
+</mapper>

@@ -5,8 +5,7 @@ import com.enterprise.entity.page.PageModel;
 import java.io.Serializable;
 
 /**
- * 关于我们
- * Created by Cesiumai on 2016/7/14.
+ * 图片空间
  */
 public class Image extends PageModel implements Serializable{
     private static final long serialVersionUID = 1L;

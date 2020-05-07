@@ -155,7 +155,12 @@ public class FrontCache implements ServletContextAware {
 	public void loadAbout() throws Exception{
 		List<About> abouts = new ArrayList<About>();
 		abouts = aboutService.selectList(new About());
-		systemManage.setAbout(abouts);
+		if(abouts.size()>0){
+			systemManage.setAbout(abouts.get(0));
+		}else{
+			systemManage.setAbout(new About());
+		}
+
 	}
 
 	/**

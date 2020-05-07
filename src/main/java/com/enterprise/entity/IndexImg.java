@@ -6,7 +6,6 @@ import java.io.Serializable;
 
 /**
  * 门户滚动图片实体类
- * Created by Cesiumai on 2016/5/27.
  */
 public class IndexImg extends PageModel implements Serializable {
     private static final long serialVersionUID = 1L;

@@ -3,7 +3,6 @@ package com.enterprise.util;
 import java.security.MessageDigest;
 /**
  * MD5加密
- * @author Cesiumai
  *
  */
 public class MD5 {

@@ -14,7 +14,6 @@ import java.util.Properties;
 /**
  * 系统管理类
  *
- * @author Cesiumai
  */
 public class SystemManage {
     private static Properties p = new Properties();
@@ -115,11 +114,11 @@ public class SystemManage {
     }
 
     //关于我们
-    public List<About> getAbout(){
-        return getCacheObject("abouts");
+    public About getAbout(){
+        return getCacheObject("about");
     }
-    public void setAbout(List<About> abouts){
-        putCacheObject("abouts",(Serializable)(abouts));
+    public void setAbout(About abouts){
+        putCacheObject("about",(Serializable)(abouts));
     }
 
     //服务领域

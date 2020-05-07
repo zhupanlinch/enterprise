@@ -29,24 +29,11 @@
 
         <div class="row">
           <div class="col-lg-6">
-            <img src="<%=path%>/modern/assets/img/about.jpg" class="img-fluid" alt="">
+            <img src="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath()%>/<%=SystemManage.getInstance().getAbout().getImage()%>" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-            <p class="font-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <ul>
-              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="icofont-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-            </ul>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
+            <h3><%=SystemManage.getInstance().getAbout().getTitle()%></h3>
+            <%=SystemManage.getInstance().getAbout().getContentHtml()%>
           </div>
         </div>
 
@@ -60,23 +47,23 @@
         <div class="row counters">
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">232</span>
-            <p>Clients</p>
+            <span data-toggle="counter-up"><%=SystemManage.getInstance().getAbout().getClient()%></span>
+            <p>企业客户</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">521</span>
-            <p>Projects</p>
+            <span data-toggle="counter-up"><%=SystemManage.getInstance().getAbout().getProject()%></span>
+            <p>服务项目</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">1,463</span>
-            <p>Hours Of Support</p>
+            <span data-toggle="counter-up"><%=SystemManage.getInstance().getAbout().getHours()%></span>
+            <p>个人客户</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">15</span>
-            <p>Hard Workers</p>
+            <span data-toggle="counter-up"><%=SystemManage.getInstance().getAbout().getWorker()%></span>
+            <p>核心员工</p>
           </div>
 
         </div>
@@ -89,33 +76,33 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Our Skills</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2><%=SystemManage.getInstance().getAbout().getSkill_title()%></h2>
+          <p><%=SystemManage.getInstance().getAbout().getSkill_content()%></p>
         </div>
 
         <div class="skills-content">
 
           <div class="progress">
-            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">HTML <i class="val">100%</i></span>
+            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="<%=SystemManage.getInstance().getAbout().getNum1()%>" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill"><%=SystemManage.getInstance().getAbout().getLabel1()%> <i class="val"><%=SystemManage.getInstance().getAbout().getNum1()%>%</i></span>
             </div>
           </div>
 
           <div class="progress">
-            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">CSS <i class="val">90%</i></span>
+            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="<%=SystemManage.getInstance().getAbout().getNum2()%>" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill"><%=SystemManage.getInstance().getAbout().getLabel2()%> <i class="val"><%=SystemManage.getInstance().getAbout().getNum2()%>%</i></span>
             </div>
           </div>
 
           <div class="progress">
-            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">JavaScript <i class="val">75%</i></span>
+            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="<%=SystemManage.getInstance().getAbout().getNum3()%>" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill"><%=SystemManage.getInstance().getAbout().getLabel3()%> <i class="val"><%=SystemManage.getInstance().getAbout().getNum3()%>%</i></span>
             </div>
           </div>
 
           <div class="progress">
-            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">Photoshop <i class="val">55%</i></span>
+            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="<%=SystemManage.getInstance().getAbout().getNum4()%>" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill"><%=SystemManage.getInstance().getAbout().getLabel4()%> <i class="val"><%=SystemManage.getInstance().getAbout().getNum4()%>%</i></span>
             </div>
           </div>
 
@@ -129,8 +116,8 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Tetstimonials</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2><%=SystemManage.getInstance().getAbout().getWorker_title()%></h2>
+          <p><%=SystemManage.getInstance().getAbout().getWorker_content()%></p>
         </div>
 
         <div class="owl-carousel testimonials-carousel">

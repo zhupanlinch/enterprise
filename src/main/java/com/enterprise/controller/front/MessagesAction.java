@@ -20,7 +20,6 @@ import java.io.IOException;
 /**
  * 前台留言
  *
- * @author Cesiumai
  */
 @Controller("frontMessageController")
 @RequestMapping("/")

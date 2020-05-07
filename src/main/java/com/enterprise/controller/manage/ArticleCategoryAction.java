@@ -19,7 +19,6 @@ import java.io.IOException;
 
 /**
  * 文章分类Action
- * Created by Cesiumai on 2016/6/14.
  */
 @Controller
 @RequestMapping("/manage/articleCategory/")

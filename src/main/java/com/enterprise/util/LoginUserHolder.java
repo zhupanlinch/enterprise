@@ -6,7 +6,6 @@ import com.enterprise.entity.User;
 
 /**
  * 验证session中用户是否还存在
- * @author Cesiumai
  *
  */
 public class LoginUserHolder {

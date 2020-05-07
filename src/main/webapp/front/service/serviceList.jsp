@@ -1,10 +1,3 @@
-<%@ page import="com.enterprise.entity.Service" %><%--
-  Created by IntelliJ IDEA.
-  User: Cesiumai
-  Date: 2016/6/17
-  Time: 11:38
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page language="java" contentType="text/html; UTF-8"
          pageEncoding="UTF-8" %>
 

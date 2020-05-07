@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+"-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="home">
+	<select id="home.selectPageList"
+		parameterType="com.enterprise.entity.Home"
+		resultType="com.enterprise.entity.Home">
+		select * from t_home  where 1=1
+		order by id desc
+		limit #{offset},#{pageSize}
+	</select>
+	<select id="home.selectPageCount"
+		parameterType="com.enterprise.entity.Home"
+		resultType="java.lang.Integer">
+		select count(*) from  t_home t where 1=1
+		
+	</select>
+	<insert id="home.insert"
+		parameterType="com.enterprise.entity.Home"
+		useGeneratedKeys="true" keyProperty="id">
+		insert into t_home(
+			id
+		<if test="image!=null and image!=''">
+			,image
+		</if>
+		<if test="title1!=null and title1!=''">
+			,title1
+		</if>
+		<if test="title2!=null and title2!=''">
+			,title2
+		</if>
+		<if test="content1!=null and content1!=''">
+			,content1
+		</if>
+		<if test="content2!=null and content2!=''">
+			,content2
+		</if>
+		<if test="feature_title!=null and feature_title!=''">
+			,feature_title
+		</if>
+		<if test="feature_content!=null and feature_content!=''">
+			,feature_content
+		</if>
+		) values (
+		#{id}
+		<if test="image!=null and image!=''">
+			,#{image}
+		</if>
+		<if test="title1!=null and title1!=''">
+			,#{title1}
+		</if>
+		<if test="title2!=null and title2!=''">
+			,#{title2}
+		</if>
+		<if test="content1!=null and content1!=''">
+			,#{content1}
+		</if>
+		<if test="content2!=null and content2!=''">
+			,#{content2}
+		</if>
+		<if test="feature_title!=null and feature_title!=''">
+			,#{feature_title}
+		</if>
+		<if test="feature_content!=null and feature_content!=''">
+			,#{feature_content}
+		</if>
+		)
+	</insert>
+	<update id="home.update"
+		parameterType="com.enterprise.entity.Home">
+		update t_home
+		set id=#{id}
+		<if test="image!=null and image!=''">
+			,image=#{image}
+		</if>
+		<if test="title1!=null and title1!=''">
+			,title1=#{title1}
+		</if>
+		<if test="title2!=null and title2!=''">
+			,title2=#{title2}
+		</if>
+		<if test="content1!=null and content1!=''">
+			,content1=#{content1}
+		</if>
+		<if test="content2!=null and content2!=''">
+			,content2=#{content2}
+		</if>
+		<if test="feature_title!=null and feature_title!=''">
+			,feature_title=#{feature_title}
+		</if>
+		<if test="feature_content!=null and feature_content!=''">
+			,feature_content=#{feature_content}
+		</if>
+			where 1=1 and id=#{id}
+	</update>
+	<select id="home.selectOne"
+		parameterType="com.enterprise.entity.Home"
+		resultType="com.enterprise.entity.Home">
+		select * from t_home where 1=1 limit 0,1
+	</select>
+	<select id="home.selectList" parameterType="com.enterprise.entity.Home" resultType="com.enterprise.entity.Home">
+		select * from t_home where 1=1
+		<if test="title!=null and title!=''">
+			and title like '%${title}%'
+		</if>
+	</select>
+	<select id="home.selectById" parameterType="int" resultType="com.enterprise.entity.Home">
+	 select * from t_home  where 1=1 and id=#{id}
+	</select>
+	<delete id="home.delete" parameterType="com.enterprise.entity.Home">
+		delete from t_home where id = #{id}
+	</delete>
+</mapper>

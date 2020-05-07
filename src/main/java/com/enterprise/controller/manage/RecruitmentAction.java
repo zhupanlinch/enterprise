@@ -18,7 +18,6 @@ import com.enterprise.util.LoginUserHolder;
 import com.enterprise.controller.BaseController;
 /**
  * 后台发布招聘
- * @author Cesiumai
  *
  */
 @Controller

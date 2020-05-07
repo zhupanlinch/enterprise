@@ -9,9 +9,6 @@ import org.springframework.stereotype.Repository;
 import javax.annotation.Resource;
 import java.util.List;
 
-/**
- * Created by Cesiumai on 2016/7/8.
- */
 @Repository("aboutDao")
 public class AboutDaoImpl implements AboutDao {
     @Resource

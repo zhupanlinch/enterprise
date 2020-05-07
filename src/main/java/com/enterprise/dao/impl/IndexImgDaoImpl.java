@@ -8,9 +8,6 @@ import org.springframework.stereotype.Repository;
 import javax.annotation.Resource;
 import java.util.List;
 
-/**
- * Created by Cesiumai on 2016/5/27.
- */
 @Repository("indexImgDao")
 public class IndexImgDaoImpl implements IndexImgDao {
     @Resource

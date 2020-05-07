@@ -8,9 +8,6 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
-/**
- * Created by Cesiumai on 2016/7/8.
- */
 @Service("serviceCardService")
 public class ServiceCardServiceImpl extends ServersManage<ServiceCard,ServiceCardDao> implements ServiceCardService{
     @Override

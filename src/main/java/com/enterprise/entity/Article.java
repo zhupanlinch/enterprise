@@ -6,7 +6,6 @@ import java.io.Serializable;
 
 /**
  * 文章实体类
- * Created by Cesiumai on 2016/6/14.
  */
 public class Article extends PageModel implements Serializable{
     private static final long serialVersionUID = 1L;

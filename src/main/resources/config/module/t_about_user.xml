@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+"-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="aboutUser">
+	<select id="aboutUser.selectPageList"
+		parameterType="com.enterprise.entity.AboutUser"
+		resultType="com.enterprise.entity.AboutUser">
+		select * from t_about_user  where 1=1
+		order by id desc
+		limit #{offset},#{pageSize}
+	</select>
+	<select id="aboutUser.selectPageCount"
+		parameterType="com.enterprise.entity.AboutUser"
+		resultType="java.lang.Integer">
+		select count(*) from  t_about_user t where 1=1
+		
+	</select>
+	<insert id="aboutUser.insert"
+		parameterType="com.enterprise.entity.AboutUser"
+		useGeneratedKeys="true" keyProperty="id">
+		insert into t_about_user(
+			id
+		<if test="name!=null and name!=''">
+			,name
+		</if>
+		<if test="job!=null and job!=''">
+			,job
+		</if>
+		<if test="image!=null and image!=''">
+			,image
+		</if>
+		<if test="content!=null and content!=''">
+			,content
+		</if>
+		) values (
+		#{id}
+		<if test="name!=null and name!=''">
+			,#{name}
+		</if>
+		<if test="job!=null and job!=''">
+			,#{job}
+		</if>
+		<if test="image!=null and image!=''">
+			,#{image}
+		</if>
+		<if test="content!=null and content!=''">
+			,#{content}
+		</if>
+		)
+	</insert>
+	<update id="aboutUser.update"
+		parameterType="com.enterprise.entity.AboutUser">
+		update t_about_user
+		set id=#{id}
+		<if test="name!=null and name!=''">
+			,name=#{name}
+		</if>
+		<if test="job!=null and job!=''">
+			,job=#{job}
+		</if>
+		<if test="image!=null and image!=''">
+			,image=#{image}
+		</if>
+		<if test="content!=null and content!=''">
+			,content=#{content}
+		</if>
+
+			where 1=1 and id=#{id}
+	</update>
+	<select id="aboutUser.selectOne"
+		parameterType="com.enterprise.entity.AboutUser"
+		resultType="com.enterprise.entity.AboutUser">
+		select * from t_about_user where 1=1 limit 0,1
+	</select>
+	<select id="aboutUser.selectList" parameterType="com.enterprise.entity.AboutUser" resultType="com.enterprise.entity.AboutUser">
+		select * from t_about_user where 1=1
+		<if test="title!=null and title!=''">
+			and title like '%${title}%'
+		</if>
+	</select>
+	<select id="aboutUser.selectById" parameterType="int" resultType="com.enterprise.entity.AboutUser">
+	 select * from t_about_user  where 1=1 and id=#{id}
+	</select>
+	<delete id="aboutUser.delete" parameterType="com.enterprise.entity.AboutUser">
+		delete from t_about_user where id = #{id}
+	</delete>
+</mapper>

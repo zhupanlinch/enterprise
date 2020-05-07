@@ -6,7 +6,6 @@ import java.io.Serializable;
 
 /**
  * 备份实体类
- * Created by Cesiumai on 2016/6/7.
  */
 public class BackUp extends PageModel implements Serializable {
     private static final long serialVersionUID = 1L;

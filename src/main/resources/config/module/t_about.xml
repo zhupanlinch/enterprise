@@ -25,12 +25,118 @@
 		<if test="contentHtml!=null and contentHtml!=''">
 			,contentHtml
 		</if>
-
-
+		<if test="title!=null and title!=''">
+			,title
+		</if>
+		<if test="image!=null and image!=''">
+			,image
+		</if>
+		<if test="client!=null and client!=''">
+			,client
+		</if>
+		<if test="project!=null and project!=''">
+			,project
+		</if>
+		<if test="hours!=null and hours!=''">
+			,hours
+		</if>
+		<if test="worker!=null and worker!=''">
+			,worker
+		</if>
+		<if test="skill_title!=null and skill_title!=''">
+			,skill_title
+		</if>
+		<if test="skill_content!=null and skill_content!=''">
+			,skill_content
+		</if>
+		<if test="label1!=null and label1!=''">
+			,label1
+		</if>
+		<if test="label2!=null and label2!=''">
+			,label2
+		</if>
+		<if test="label3!=null and label3!=''">
+			,label3
+		</if>
+		<if test="label4!=null and label4!=''">
+			,label4
+		</if>
+		<if test="num1!=null and num1!=''">
+			,num1
+		</if>
+		<if test="num2!=null and num2!=''">
+			,num2
+		</if>
+		<if test="num3!=null and num3!=''">
+			,num3
+		</if>
+		<if test="num4!=null and num4!=''">
+			,num4
+		</if>
+		<if test="worker_title!=null and worker_title!=''">
+			,worker_title
+		</if>
+		<if test="worker_content!=null and worker_content!=''">
+			,worker_content
+		</if>
 		) values (
 		#{id}
 		<if test="contentHtml!=null and contentHtml!=''">
 			,#{contentHtml}
+		</if>
+		<if test="title!=null and title!=''">
+			,#{title}
+		</if>
+		<if test="image!=null and image!=''">
+			,#{image}
+		</if>
+		<if test="client!=null and client!=''">
+			,#{client}
+		</if>
+		<if test="project!=null and project!=''">
+			,#{project}
+		</if>
+		<if test="hours!=null and hours!=''">
+			,#{hours}
+		</if>
+		<if test="worker!=null and worker!=''">
+			,#{worker}
+		</if>
+		<if test="skill_title!=null and skill_title!=''">
+			,#{skill_title}
+		</if>
+		<if test="skill_content!=null and skill_content!=''">
+			,#{skill_content}
+		</if>
+		<if test="label1!=null and label1!=''">
+			,#{label1}
+		</if>
+		<if test="label2!=null and label2!=''">
+			,#{label2}
+		</if>
+		<if test="label3!=null and label3!=''">
+			,#{label3}
+		</if>
+		<if test="label4!=null and label4!=''">
+			,#{label4}
+		</if>
+		<if test="num1!=null and num1!=''">
+			,#{num1}
+		</if>
+		<if test="num2!=null and num2!=''">
+			,#{num2}
+		</if>
+		<if test="num3!=null and num3!=''">
+			,#{num3}
+		</if>
+		<if test="num4!=null and num4!=''">
+			,#{num4}
+		</if>
+		<if test="worker_title!=null and worker_title!=''">
+			,#{worker_title}
+		</if>
+		<if test="worker_content!=null and worker_content!=''">
+			,#{worker_content}
 		</if>
 		)
 	</insert>
@@ -40,6 +146,60 @@
 		set id=#{id}
 		<if test="contentHtml!=null and contentHtml!=''">
 			,contentHtml=#{contentHtml}
+		</if>
+		<if test="title!=null and title!=''">
+			,title=#{title}
+		</if>
+		<if test="image!=null and image!=''">
+			,image=#{image}
+		</if>
+		<if test="client!=null and client!=''">
+			,client=#{client}
+		</if>
+		<if test="project!=null and project!=''">
+			,project=#{project}
+		</if>
+		<if test="hours!=null and hours!=''">
+			,hours=#{hours}
+		</if>
+		<if test="worker!=null and worker!=''">
+			,worker=#{worker}
+		</if>
+		<if test="skill_title!=null and skill_title!=''">
+			,skill_title=#{skill_title}
+		</if>
+		<if test="skill_content!=null and skill_content!=''">
+			,skill_content=#{skill_content}
+		</if>
+		<if test="label1!=null and label1!=''">
+			,label1=#{label1}
+		</if>
+		<if test="label2!=null and label2!=''">
+			,label2=#{label2}
+		</if>
+		<if test="label3!=null and label3!=''">
+			,label3=#{label3}
+		</if>
+		<if test="label4!=null and label4!=''">
+			,label4=#{label4}
+		</if>
+		<if test="num1!=null and num1!=''">
+			,num1=#{num1}
+		</if>
+		<if test="num2!=null and num2!=''">
+			,num2=#{num2}
+		</if>
+		<if test="num3!=null and num3!=''">
+			,num3=#{num3}
+		</if>
+		<if test="num4!=null and num4!=''">
+			,num4=#{num4}
+		</if>
+		<if test="worker_title!=null and worker_title!=''">
+			,worker_title=#{worker_title}
+		</if>
+		<if test="worker_content!=null and worker_content!=''">
+			,worker_content=#{worker_content}
 		</if>
 			where 1=1 and id=#{id}
 	</update>

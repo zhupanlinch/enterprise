@@ -1,12 +1,5 @@
 <%@ page import="com.enterprise.entity.ArticleCategory" %>
 
-<%--
-  Created by IntelliJ IDEA.
-  User: Cesiumai
-  Date: 2016/6/15
-  Time: 9:41
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page language="java" contentType="text/html; UTF-8"
          pageEncoding="UTF-8" %>
 

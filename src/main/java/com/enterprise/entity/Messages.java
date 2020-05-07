@@ -6,7 +6,6 @@ import com.enterprise.entity.page.PageModel;
 
 /**
  * 留言实体类
- * @author Cesiumai
  *
  */
 public class Messages extends PageModel implements Serializable{

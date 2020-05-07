@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * 文章管理Action
- * Created by Cesiumai on 2016/6/14.
  */
 @Controller
 @RequestMapping("/manage/article/")

@@ -8,9 +8,6 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
-/**
- * Created by Cesiumai on 2016/7/8.
- */
 @Service("aboutService")
 public class AboutServiceImpl extends ServersManage<About,AboutDao> implements AboutService{
     @Override

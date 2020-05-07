@@ -16,8 +16,7 @@ import javax.annotation.Resource;
 /**
  * 用户业务逻辑实现类
  * 
- * @author huangf
- * 
+ *
  */
 @Service("userService")
 public class UserServiceImpl implements UserService {
