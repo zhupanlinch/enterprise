@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50725
 File Encoding         : 65001
 
-Date: 2020-05-06 11:04:16
+Date: 2020-05-07 22:44:34
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -22,13 +22,53 @@ DROP TABLE IF EXISTS `t_about`;
 CREATE TABLE `t_about` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `contentHtml` longtext,
+  `title` varchar(255) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `client` varchar(255) DEFAULT NULL,
+  `project` varchar(255) DEFAULT NULL,
+  `hours` varchar(255) DEFAULT NULL,
+  `worker` varchar(255) DEFAULT NULL,
+  `skill_title` varchar(255) DEFAULT NULL,
+  `skill_content` varchar(400) DEFAULT NULL,
+  `label1` varchar(255) DEFAULT NULL,
+  `label2` varchar(255) DEFAULT NULL,
+  `label3` varchar(255) DEFAULT NULL,
+  `label4` varchar(255) DEFAULT NULL,
+  `num1` varchar(255) DEFAULT NULL,
+  `num2` varchar(255) DEFAULT NULL,
+  `num3` varchar(255) DEFAULT NULL,
+  `num4` varchar(255) DEFAULT NULL,
+  `worker_title` varchar(255) DEFAULT NULL,
+  `worker_content` varchar(400) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_about
 -- ----------------------------
-INSERT INTO `t_about` VALUES ('6', 'XX装饰工程有限公司是一个年轻、活力、富有极强的创造力及社会责任感的年轻团队，置身于先进的空间设计领域，服务于各种空间的客户需求。不同流派、不同风格的设计理念在对艺术和卓越的追求中融会贯通，使更多、更新的设计理念和设计手法在这里激情释放和升华。同时，让我们尊贵的客户能够享受到最前沿的设计。沪景装饰公司更以强大的施工作业团队为您提供全方位的空间解决方案。');
+INSERT INTO `t_about` VALUES ('6', '<p class=\"font-italic\">\r\n	的产品和技术支持、健全的售后服务，我公司主要经营计算机软硬件的技术开发、技术咨询、技术服务，计算机系统.\r\n</p>\r\n<ul>\r\n	<li>\r\n		<i class=\"icofont-check-circled\"></i> 工商行政管理和质量技术监督局注册成立.\r\n	</li>\r\n	<li>\r\n		<i class=\"icofont-check-circled\"></i>主要经营计算机软硬件的技术开发\r\n	</li>\r\n	<li>\r\n		<i class=\"icofont-check-circled\"></i>计算机网络工程的设计、施工，计算机软硬件和办公用品的销售，商务信息咨询，文化艺术交流活动策划\r\n	</li>\r\n</ul>\r\n<p>\r\n	计算机软硬件的技术开发 , 技术咨询 , 技术服务 , 计算机系统集成 , 计算机网络工程的设计 , 施工 , 计算机软硬件和办公用品的销售 , 商务信息咨询 , 文化艺术交流活动策划。\r\n</p>', '始终为客户提供好的产品和技术支持、健全的售后服务', '/enterprise/modern/assets/img/about.jpg', '232', '523', '15463', '16', '提供好的产品和技术支持', '我们始终为客户提供好的产品和技术支持、健全的售后服务，我公司主要经营计算机软硬件的技术开发、技术咨询、技术服务，计算机系统集成，计算机网络工程的设计。', '技术开发', '系统集成', '技术服务', '技术咨询', '34', '53', '61', '27', '计算机软硬件的技术开发 ', '计算机软硬件的技术开发 , 技术咨询 , 技术服务 , 计算机系统集成 , 计算机网络工程的设计 , 施工 , 计算机软硬件和办公用品的销售 , 商务信息咨询 , 文化艺术交流活动策划。（依法须经批准的项目 , 经相关部门批准后方可开展经营活动）');
+
+-- ----------------------------
+-- Table structure for t_about_user
+-- ----------------------------
+DROP TABLE IF EXISTS `t_about_user`;
+CREATE TABLE `t_about_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `job` varchar(255) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `content` varchar(400) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_about_user
+-- ----------------------------
+INSERT INTO `t_about_user` VALUES ('1', '宋伊人', 'PM', '/enterprise/attached/image/20200507/20200507220407_84.png', '2013年，因拍摄“致青春”微博系列校服照而被网友熟知 [1]  ；同年，她还在娱乐脱口秀节目《天天向上》主题为“我在大学等你”中，以“最美校服女生”登场被观众熟知 [2]  。2015年，凭借穿越爱情电影《新步步惊心》步入演艺圈 [3]  。2016年，除了拍摄现代青春偶像剧《最美不过初相见》 [4]  ；她参演的爱情片《六弄咖啡馆》和喜剧网络《女娲成长日记》也相继上映播出 [5-6]  。2017年，主演的治愈系情感电影《美容针》上映 [7]  ；同年，她还主演了古装玄幻剧《将夜》');
+INSERT INTO `t_about_user` VALUES ('2', '奶茶妹妹', 'CEO', '/enterprise/attached/image/20200507/20200507220257_410.png', '2011年，章泽天就读清华大学。2014年4月14日，章泽天与刘强东的恋情被媒体曝光，引起网友广泛关注。2015年1月2日，章泽天主持的《燃烧吧大脑》在江苏卫视播出。');
+INSERT INTO `t_about_user` VALUES ('3', '张柏芝', 'LTO', '/enterprise/attached/image/20200507/20200507220147_828.png', '1998年出演个人首部电影《喜剧之王》 [1]  。1999年发行个人首张EP《任何天气》，并凭借歌曲《星语星愿》获得关注。2000年获得第22届十大中文金曲最有前途新人金奖。2002年凭借韩国电影《白兰》获得韩国电影大钟奖最佳女主角奖提名，成为首位入围韩国三大电影节之一的华人演员。');
+INSERT INTO `t_about_user` VALUES ('4', '张曼玉', 'PL', '/enterprise/attached/image/20200507/20200507220013_516.png', '张曼玉，1964年9月20日出生于香港，祖籍上海，中国香港女演员、歌手、词曲创作者，国家一级演员，爱丁堡大学荣誉博士');
+INSERT INTO `t_about_user` VALUES ('5', '罗玉凤', '运营总监', '/enterprise/attached/image/20200507/20200507215319_524.png', '罗玉凤，女，1985年9月生，重庆市綦江区人，因一系列雷人言论在网络上走红，被人称为“凤姐”。罗玉凤自称懂诗画、会弹琴，精通古汉语，自称“9岁起博览群书，20岁达到顶峰，智商前300年后300年无人能及”。');
 
 -- ----------------------------
 -- Table structure for t_article
@@ -123,6 +163,47 @@ INSERT INTO `t_friendlinks` VALUES ('11', '万网', '_blank', 'http://www.net.cn
 INSERT INTO `t_friendlinks` VALUES ('16', '百度', '_blank', 'http://www.baidu.com');
 
 -- ----------------------------
+-- Table structure for t_home
+-- ----------------------------
+DROP TABLE IF EXISTS `t_home`;
+CREATE TABLE `t_home` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `image` varchar(255) DEFAULT NULL,
+  `title1` varchar(255) DEFAULT NULL,
+  `title2` varchar(255) DEFAULT NULL,
+  `content1` varchar(400) DEFAULT NULL,
+  `content2` varchar(400) DEFAULT NULL,
+  `feature_title` varchar(255) DEFAULT NULL,
+  `feature_content` varchar(400) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_home
+-- ----------------------------
+INSERT INTO `t_home` VALUES ('1', '/enterprise/modern/assets/img/why-us.jpg', 'LOREM IPSUM', 'NEMO ENIM', 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident', 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque', '发展历程', 'Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.');
+
+-- ----------------------------
+-- Table structure for t_home_features
+-- ----------------------------
+DROP TABLE IF EXISTS `t_home_features`;
+CREATE TABLE `t_home_features` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `content` longtext,
+  `image` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_home_features
+-- ----------------------------
+INSERT INTO `t_home_features` VALUES ('1', 'Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.', '<p class=\"font-italic\" style=\"box-sizing:border-box;margin-top:0px;margin-bottom:1rem;color:#444444;font-family:&quot;font-size:16px;white-space:normal;background-color:#FFFFFF;font-style:italic !important;\">\r\n	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\r\n</p>\r\n<ul style=\"box-sizing:border-box;margin-top:0px;margin-bottom:1rem;list-style:none;padding:0px;color:#444444;font-family:&quot;font-size:16px;white-space:normal;background-color:#FFFFFF;\">\r\n	<li style=\"box-sizing:border-box;padding-bottom:10px;\">\r\n		&nbsp;Ullamco laboris nisi ut aliquip ex ea commodo consequat.\r\n	</li>\r\n	<li style=\"box-sizing:border-box;padding-bottom:10px;\">\r\n		&nbsp;Duis aute irure dolor in reprehenderit in voluptate velit.\r\n	</li>\r\n</ul>', '/enterprise/modern/assets/img/features-1.svg');
+INSERT INTO `t_home_features` VALUES ('2', 'Corporis temporibus maiores provident', '<p class=\"font-italic\" style=\"box-sizing:border-box;margin-top:0px;margin-bottom:1rem;color:#444444;font-family:&quot;font-size:16px;white-space:normal;background-color:#FFFFFF;font-style:italic !important;\">\r\n	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\r\n</p>\r\n<p style=\"box-sizing:border-box;margin-top:0px;margin-bottom:0px;color:#444444;font-family:&quot;font-size:16px;white-space:normal;background-color:#FFFFFF;\">\r\n	Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum\r\n</p>', '/enterprise/modern/assets/img/features-2.svg');
+INSERT INTO `t_home_features` VALUES ('3', '2018年我们取得了巨大的成就', '<p style=\"box-sizing:border-box;margin-top:0px;margin-bottom:1rem;color:#444444;font-family:&quot;font-size:16px;white-space:normal;background-color:#FFFFFF;\">\r\n	Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.\r\n</p>\r\n<ul>\r\n	<li>\r\n		<span style=\"color:#444444;font-family:&quot;font-size:16px;white-space:normal;background-color:#FFFFFF;\">&nbsp;</span><span style=\"color:#444444;font-family:&quot;font-size:16px;white-space:normal;background-color:#FFFFFF;\">Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>\r\n	</li>\r\n	<li>\r\n		<span style=\"color:#444444;font-family:&quot;font-size:16px;white-space:normal;background-color:#FFFFFF;\">&nbsp;Duis aute irure dolor in reprehenderit in voluptate velit.</span>\r\n	</li>\r\n	<li>\r\n		<span style=\"color:#444444;font-family:&quot;font-size:16px;white-space:normal;background-color:#FFFFFF;\">&nbsp;Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.</span>\r\n	</li>\r\n</ul>', '/enterprise/modern/assets/img/features-3.svg');
+INSERT INTO `t_home_features` VALUES ('4', '2015年公司在科兴科学园正式创建，2个当家就在这间小办公室里制定了这个宏伟蓝图', '<p class=\"font-italic\" style=\"box-sizing:border-box;margin-top:0px;margin-bottom:1rem;color:#444444;font-family:&quot;font-size:16px;white-space:normal;background-color:#FFFFFF;font-style:italic !important;\">\r\n	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\r\n</p>\r\n<p style=\"box-sizing:border-box;margin-top:0px;margin-bottom:0px;color:#444444;font-family:&quot;font-size:16px;white-space:normal;background-color:#FFFFFF;\">\r\n	Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum\r\n</p>', '/enterprise/modern/assets/img/features-4.svg');
+
+-- ----------------------------
 -- Table structure for t_image
 -- ----------------------------
 DROP TABLE IF EXISTS `t_image`;
@@ -164,8 +245,8 @@ CREATE TABLE `t_indeximg` (
 -- Records of t_indeximg
 -- ----------------------------
 INSERT INTO `t_indeximg` VALUES ('20', '装饰图1', '/enterprise/attached/image/20200423/20200423210921_471.jpg', '1', '#', 'y');
-INSERT INTO `t_indeximg` VALUES ('21', '装饰图2', '/enterprise/attached/image/20160616/20160616095551_748.jpg', '2', '#', 'y');
-INSERT INTO `t_indeximg` VALUES ('23', '装饰图3', '/enterprise/attached/image/20160616/20160616095629_798.jpg', '3', '#', 'y');
+INSERT INTO `t_indeximg` VALUES ('21', '装饰图2', '/enterprise/attached/image/20200507/20200507223428_902.jpg', '2', '#', 'y');
+INSERT INTO `t_indeximg` VALUES ('23', '装饰图3', '/enterprise/attached/image/20200507/20200507223738_671.jpg', '3', '#', 'y');
 
 -- ----------------------------
 -- Table structure for t_menu
@@ -180,7 +261,7 @@ CREATE TABLE `t_menu` (
   `type` varchar(15) COLLATE utf8_unicode_ci DEFAULT NULL,
   `icon` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=121 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=124 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of t_menu
@@ -209,7 +290,10 @@ INSERT INTO `t_menu` VALUES ('116', '6', '/manage/contact/selectList', '联系�
 INSERT INTO `t_menu` VALUES ('117', '6', '/manage/about/selectList', '关于我们', '8', 'page', null);
 INSERT INTO `t_menu` VALUES ('118', '6', '/manage/service/selectList', '服务领域', '9', 'page', null);
 INSERT INTO `t_menu` VALUES ('119', '6', '/manage/image/selectList', '图片空间', '10', 'page', null);
-INSERT INTO `t_menu` VALUES ('120', '6', '/manage/serviceCard/selectList', '服务卡片', '10', 'page', null);
+INSERT INTO `t_menu` VALUES ('120', '6', '/manage/serviceCard/selectList', '服务卡片', '11', 'page', null);
+INSERT INTO `t_menu` VALUES ('121', '6', '/manage/home/toEdit?init=y', '首页信息', '12', 'page', '');
+INSERT INTO `t_menu` VALUES ('122', '6', '/manage/homeFeature/selectList', '历程信息', '13', 'page', null);
+INSERT INTO `t_menu` VALUES ('123', '6', '/manage/aboutUser/selectList', '关于我们-核心成员', '14', 'page', null);
 
 -- ----------------------------
 -- Table structure for t_messages
@@ -324,25 +408,44 @@ CREATE TABLE `t_systemlog` (
   `loginArea` varchar(45) DEFAULT NULL,
   `diffAreaLogin` char(1) DEFAULT 'n',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=500 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=537 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_systemlog
 -- ----------------------------
 INSERT INTO `t_systemlog` VALUES ('486', 'login', 'login', '1', 'admin', '211.161.162.219', '2020-05-02 10:22:08', null, 'n');
-INSERT INTO `t_systemlog` VALUES ('487', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-05 19:18:40', null, 'y');
-INSERT INTO `t_systemlog` VALUES ('488', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-05 19:28:35', null, 'n');
-INSERT INTO `t_systemlog` VALUES ('489', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-05 19:31:22', null, 'n');
-INSERT INTO `t_systemlog` VALUES ('490', 'login', 'login', '1', 'admin', '127.0.0.1', '2020-05-05 19:35:16', null, 'n');
-INSERT INTO `t_systemlog` VALUES ('491', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-05 20:30:58', null, 'y');
-INSERT INTO `t_systemlog` VALUES ('492', 'loginOut', 'loginOut', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-05 20:33:23', '0', 'n');
-INSERT INTO `t_systemlog` VALUES ('493', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-05 20:33:34', null, 'n');
-INSERT INTO `t_systemlog` VALUES ('494', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-05 20:35:22', null, 'n');
-INSERT INTO `t_systemlog` VALUES ('495', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-05 20:37:58', '0', 'n');
-INSERT INTO `t_systemlog` VALUES ('496', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-05 20:40:28', null, 'n');
-INSERT INTO `t_systemlog` VALUES ('497', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-05 20:41:59', null, 'n');
-INSERT INTO `t_systemlog` VALUES ('498', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-05 21:07:19', null, 'n');
 INSERT INTO `t_systemlog` VALUES ('499', 'login', 'login', '1', 'admin', '58.48.225.189', '2020-05-06 10:20:15', null, 'y');
+INSERT INTO `t_systemlog` VALUES ('500', 'login', 'login', '1', 'admin', '58.48.225.189', '2020-05-06 11:59:09', '武汉电信[420100]', 'n');
+INSERT INTO `t_systemlog` VALUES ('501', 'login', 'login', '1', 'admin', '121.33.210.172', '2020-05-06 14:48:28', '广州电信[440100]', 'y');
+INSERT INTO `t_systemlog` VALUES ('508', 'login', 'login', '1', 'admin', '58.48.225.189', '2020-05-07 10:19:23', null, 'y');
+INSERT INTO `t_systemlog` VALUES ('509', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-07 10:24:51', null, 'y');
+INSERT INTO `t_systemlog` VALUES ('510', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-07 10:26:44', null, 'n');
+INSERT INTO `t_systemlog` VALUES ('511', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-07 10:31:29', null, 'n');
+INSERT INTO `t_systemlog` VALUES ('512', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-07 10:35:24', null, 'n');
+INSERT INTO `t_systemlog` VALUES ('513', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-07 10:43:07', null, 'n');
+INSERT INTO `t_systemlog` VALUES ('514', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-07 10:47:06', null, 'n');
+INSERT INTO `t_systemlog` VALUES ('515', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-07 10:50:56', null, 'n');
+INSERT INTO `t_systemlog` VALUES ('516', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-07 10:55:13', null, 'n');
+INSERT INTO `t_systemlog` VALUES ('517', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-07 10:59:01', null, 'n');
+INSERT INTO `t_systemlog` VALUES ('518', 'login', 'login', '1', 'admin', '58.48.225.189', '2020-05-07 11:00:21', null, 'y');
+INSERT INTO `t_systemlog` VALUES ('519', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-07 11:04:15', null, 'y');
+INSERT INTO `t_systemlog` VALUES ('520', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-07 11:13:40', null, 'n');
+INSERT INTO `t_systemlog` VALUES ('521', 'loginOut', 'loginOut', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-07 11:14:43', null, 'n');
+INSERT INTO `t_systemlog` VALUES ('522', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-07 11:14:47', null, 'n');
+INSERT INTO `t_systemlog` VALUES ('523', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-07 11:20:47', null, 'n');
+INSERT INTO `t_systemlog` VALUES ('524', 'login', 'login', '1', 'admin', '124.64.18.102', '2020-05-07 20:55:13', null, 'y');
+INSERT INTO `t_systemlog` VALUES ('525', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-07 21:18:34', null, 'y');
+INSERT INTO `t_systemlog` VALUES ('526', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-07 21:24:21', null, 'n');
+INSERT INTO `t_systemlog` VALUES ('527', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-07 21:26:04', null, 'n');
+INSERT INTO `t_systemlog` VALUES ('528', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-07 21:28:15', null, 'n');
+INSERT INTO `t_systemlog` VALUES ('529', 'login', 'login', '1', 'admin', '211.161.162.219', '2020-05-07 21:46:31', null, 'y');
+INSERT INTO `t_systemlog` VALUES ('530', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-07 21:47:50', null, 'y');
+INSERT INTO `t_systemlog` VALUES ('531', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-07 21:50:34', null, 'n');
+INSERT INTO `t_systemlog` VALUES ('532', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-07 21:51:58', null, 'n');
+INSERT INTO `t_systemlog` VALUES ('533', 'login', 'login', '1', 'admin', '0:0:0:0:0:0:0:1', '2020-05-07 21:58:59', null, 'n');
+INSERT INTO `t_systemlog` VALUES ('534', 'login', 'login', '1', 'admin', '211.161.162.219', '2020-05-07 22:16:25', null, 'y');
+INSERT INTO `t_systemlog` VALUES ('535', 'login', 'login', '1', 'admin', '211.161.162.219', '2020-05-07 22:26:01', null, 'n');
+INSERT INTO `t_systemlog` VALUES ('536', 'login', 'login', '1', 'admin', '211.161.162.219', '2020-05-07 22:32:03', null, 'n');
 
 -- ----------------------------
 -- Table structure for t_systemsetting
