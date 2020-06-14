@@ -87,6 +87,12 @@ jdbc.url=jdbc:mysql://localhost:3306/enterprise?useUnicode=true&characterEncodin
 
 * 后端地址：http://upint.cn/enterprise/manage/user/login
 
+## 捐赠
+
+捐款账号支付宝（同微信） 13163396277
+
+2020-06-14 感谢来自北京的Kalorr捐赠500元
+
 # 系统预览
 
 ## 首页
