@@ -14,11 +14,35 @@
 
 * 模版引擎：JSP
 
-* 数 据 库：MySQL
+* 数 据 库：MySQL 5.7，如果使用新版本的mysql请参考下面mysql升级
 
 * 核心框架：Spring、SpringMVC、mybatis、ehcache
 
 * 皮肤开发：在webapp下创建文件夹，在webapp\manage\systemsetting\systemSettingEdit.jsp中加上皮肤配置项，进行模板开发，修改配置即可生效。目前已有2套皮肤，可以切换查看。
+
+## mysql升级
+升级到较新版本，如8.*请更新pom文件中的jdbc相关jar包
+pom文件：
+增加
+<dependency>
+    <groupId>javax.annotation</groupId>
+    <artifactId>javax.annotation-api</artifactId>
+    <version>1.3.2</version>
+</dependency>
+修改pom.xml
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.18</version>
+</dependency>
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-jdbc</artifactId>
+    <version>5.2.7.RELEASE</version>
+</dependency>
+修改conf.properties
+jdbc.driver=com.mysql.cj.jdbc.Driver
+jdbc.url=jdbc:mysql://localhost:3306/enterprise?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
 
 ## 快速开始
 
@@ -34,7 +58,7 @@
 
 ## 在线演示
 
-* 请不要修改密码，不要修改或者添加破坏风格的内容
+* 请不要修改密码，不要修改或者添加破坏风格的内容,如果不能访问了请联系我
 
 * 前端地址：http://upint.cn/enterprise
 
