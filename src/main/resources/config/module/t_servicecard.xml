@@ -54,7 +54,11 @@
 	<select id="serviceCard.selectOne"
 		parameterType="com.enterprise.entity.ServiceCard"
 		resultType="com.enterprise.entity.ServiceCard">
-		select * from t_servicecard where 1=1 limit 0,1
+		select * from t_servicecard where 1=1
+		<if test="id!=0">
+			and id=#{id}
+		</if>
+		limit 0,1
 	</select>
 	<select id="serviceCard.selectList" parameterType="com.enterprise.entity.ServiceCard" resultType="com.enterprise.entity.ServiceCard">
 		select * from t_servicecard where 1=1
