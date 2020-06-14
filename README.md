@@ -89,7 +89,7 @@ jdbc.url=jdbc:mysql://localhost:3306/enterprise?useUnicode=true&characterEncodin
 
 ## 捐赠
 
-捐款账号支付宝（同微信） 13163396277
+接收捐款账号，支付宝（同微信） 13163396277
 
 2020-06-14 感谢来自北京的Kalorr捐赠500元
 
