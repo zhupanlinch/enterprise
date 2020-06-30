@@ -91,7 +91,9 @@ jdbc.url=jdbc:mysql://localhost:3306/enterprise?useUnicode=true&characterEncodin
 
 接收捐款账号，支付宝（同微信） 13163396277
 
-2020-06-14 感谢来自北京的Kalorr捐赠500元
+2020-06-14 感谢来自帝都的Kalorr捐赠500元
+
+2020-06-30 感谢来自魔都的Dust捐赠88元
 
 # 系统预览
 
